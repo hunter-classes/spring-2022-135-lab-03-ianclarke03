@@ -115,7 +115,7 @@ return max;
 //Task C
 
 /*Add a function std::string compare_basins(std::string date) that will return East if the East basin was higher on the specified date and West if the West was higher. It should return Equal if the values were the same.
-
+*/
 
 
 string compare_basins(string date)
@@ -131,17 +131,23 @@ if (fin.fail())
 string junk;        // new string variable
 getline(fin, junk); // read one line from the file 
 
-string date;
-double eastSt;
+string list_date;
+double eastSt, eastEl, westSt, westEl;
 
 
-
-while(fin >> date >> eastSt) 
+while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) 
 { 
     fin.ignore(INT_MAX, '\n');
-    
+    if (date == list_date)
+    {
+      if (eastEl > westEl)
+      cout << "East";
+      else if (eastEl < westEl)
+      cout << "West";
+      else if(eastEl == westEl)
+      cout << "Equal";
+    }
 }
 
 fin.close();
 }
-*/

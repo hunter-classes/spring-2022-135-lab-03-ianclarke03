@@ -13,6 +13,8 @@ int main(){
   
   cout << "Maximum storage in East basin: " << get_max_east() << " billion gallons" << endl;
   
+  //task C
+  cout << "Date: " << "04/08/2018" << compare_basins("04/08/2018") << endl;
 
   return 0;
 }
