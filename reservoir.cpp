@@ -1,4 +1,15 @@
 /*
+Author: Ian Clarke
+Course: CSCI-135
+Instructor: Michael Zamansky
+Assignment: Lab3A
+User inputs a date.
+The East basin storage level on that date is printed.
+
+
+
+
+
 Write a program that consists of two .cpp files plus any supporting files. One will be named main.cpp and it will drive your program. It will contain the main function. The other file should be named reservoir.cpp and should contain a function with the prototype double get_east_storage(std::string date).
 
 The get_east_storage function should accept a std::string specifying a date and should return the East Basin storage for that day. Your program should call and test this function from main. There should be no keyboard input but the output should illustrate that the function works correctly.
@@ -30,7 +41,7 @@ using namespace std;
 
 
 
-double get_east_storage (string date)
+double get_east_storage (string target_date)
 {
 
 ifstream fin("Current_Reservoir_Levels.tsv");
@@ -44,7 +55,7 @@ string junk;        // new string variable
 getline(fin, junk); // read one line from the file 
 
 
-//string date;
+string date;
 //cout << "Please input a date: ";
 //cin >> date;
 //cout << endl;
@@ -64,10 +75,10 @@ while(fin >> date >> eastSt >> eastEl >> westSt >> westEl) {
                           //ignorring the remaining columns 
 
     // To print the date and East basin storage:
-    //cout << date << " " << eastSt << endl;
-    if
+    cout << date << " " << eastSt << endl;
+
 }
-//cout << "East basin storage: " << eastSt << " billion gallons" << endl;
+cout << "East basin storage: " << eastSt << " billion gallons" << endl;
 
 //After you are done reading the file, close the stream
 fin.close();                       
@@ -79,3 +90,11 @@ int main()
 
   return 0;
 }
+
+
+/*    int x = date.compare(target_date);
+ 
+    if (x != 0)
+        cout << "";
+    else
+        break;
