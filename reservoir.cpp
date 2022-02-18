@@ -13,7 +13,7 @@ Assignment: Lab3
 #include <climits>
 using namespace std;
 
-double get_east_storage (string date)
+double get_east_storage (std::string date)
 {
 
 ifstream fin("Current_Reservoir_Levels.tsv");
@@ -24,10 +24,10 @@ if (fin.fail())
     exit(1); // exit if failed to open the file
 }
 
-string junk;        // new string variable
-getline(fin, junk); // read one line from the file 
+std::string junk;        // new string variable
+std::getline(fin, junk); // read one line from the file 
 
-string list_date;
+std::string list_date;
 double eastSt, target_eastSt;
 
 
@@ -58,10 +58,10 @@ if (fin.fail())
     exit(1); // exit if failed to open the file
 }
 
-string junk;        // new string variable
-getline(fin, junk); // read one line from the file 
+std::string junk;        // new string variable
+std::getline(fin, junk); // read one line from the file 
 
-string date;
+std::string date;
 double eastSt, min;
 min = 100;
 
@@ -91,10 +91,10 @@ if (fin.fail())
     exit(1); // exit if failed to open the file
 }
 
-string junk;        // new string variable
-getline(fin, junk); // read one line from the file 
+std::string junk;        // new string variable
+std::getline(fin, junk); // read one line from the file 
 
-string date;
+std::string date;
 double eastSt, max;
 max = 0;
 
@@ -118,7 +118,7 @@ return max;
 */
 
 
-string compare_basins(string date)
+std::string compare_basins(std::string date)
 {
 ifstream fin("Current_Reservoir_Levels.tsv");
 if (fin.fail()) 
@@ -128,10 +128,10 @@ if (fin.fail())
     exit(1); // exit if failed to open the file
 }
 
-string junk;        // new string variable
-getline(fin, junk); // read one line from the file 
+std::string junk;        // new string variable
+std::getline(fin, junk); // read one line from the file 
 
-string list_date;
+std::string list_date;
 double eastSt, eastEl, westSt, westEl;
 
 
